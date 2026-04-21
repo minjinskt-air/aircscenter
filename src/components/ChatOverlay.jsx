@@ -22,7 +22,7 @@ let replyIdx = 0;
 export default function ChatOverlay({ onTalkingChange, onEmojiSpawn }) {
   const [messages, setMessages] = useState([
     { id: 1, text: '안녕하세요! air 전담 상담사 아리아예요 ✨<br>편하게 말씀해 주세요!', isUser: false, time: '9:41' },
-    { id: 2, text: '주문 배송 언제 오나요?', isUser: true, time: '9:42' },
+    { id: 2, text: '요금제 개통 가능하나요?', isUser: true, time: '9:42' },
     { id: 3, text: '잠깐만요, 확인해드릴게요 😊<br>핸드폰이나 연락처 적어 주실 수 있을까요?', isUser: false, time: '9:42' },
   ]);
   const [isTyping, setIsTyping] = useState(false);
