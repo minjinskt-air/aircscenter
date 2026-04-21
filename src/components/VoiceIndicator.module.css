@@ -1,0 +1,28 @@
+.voiceIndicator {
+  position: absolute;
+  bottom: 290px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 32px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.voiceIndicator.active {
+  opacity: 1;
+}
+
+.vbar {
+  width: 4px;
+  border-radius: 3px;
+  background: linear-gradient(to top, #006EFF, #a78bfa);
+  animation: vw var(--d, 0.9s) ease-in-out infinite var(--delay, 0s);
+}
+@keyframes vw {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}

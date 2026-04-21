@@ -1,0 +1,42 @@
+.msgRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  animation: msgIn 0.2s ease-out;
+}
+@keyframes msgIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.msgRow.user { flex-direction: row-reverse; }
+
+.bubble {
+  max-width: 68%;
+  padding: 9px 13px;
+  border-radius: 16px;
+  font-size: 13px;
+  line-height: 1.45;
+  word-break: keep-all;
+}
+
+.bubbleAgent {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #1A1D27;
+  border-bottom-left-radius: 4px;
+}
+
+.bubbleUser {
+  background: rgba(0, 110, 255, 0.85);
+  backdrop-filter: blur(10px);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.msgTime {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}

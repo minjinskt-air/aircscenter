@@ -1,0 +1,29 @@
+.quickBtns {
+  display: flex;
+  gap: 6px;
+  padding: 0 14px 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.quickBtns::-webkit-scrollbar { display: none; }
+
+.qbtn {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  color: #1A1D27;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s;
+  font-family: 'Pretendard', -apple-system, sans-serif;
+}
+.qbtn:active {
+  background: rgba(0, 110, 255, 0.12);
+  border-color: rgba(0, 110, 255, 0.4);
+  color: #006EFF;
+}

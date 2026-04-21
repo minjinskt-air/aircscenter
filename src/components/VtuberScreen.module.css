@@ -1,0 +1,81 @@
+.vtuberBg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #EEF4FF 0%, #E8EEFF 50%, #F2EEFF 100%);
+  overflow: hidden;
+}
+
+.bgParticles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: floatUp var(--d, 6s) ease-in-out infinite var(--delay, 0s);
+  opacity: 0;
+}
+@keyframes floatUp {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  20% { opacity: 0.6; }
+  80% { opacity: 0.3; }
+  100% { opacity: 0; transform: translateY(-300px) scale(1.2); }
+}
+
+.lightRay {
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, rgba(77,160,255,0.3), transparent);
+  animation: rayAnim var(--d, 4s) ease-in-out infinite var(--delay, 0s);
+  opacity: 0;
+}
+@keyframes rayAnim {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.aurora {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: auroraMove var(--d, 8s) ease-in-out infinite var(--delay, 0s);
+}
+@keyframes auroraMove {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.15; }
+  50% { transform: translate(20px, -20px) scale(1.1); opacity: 0.25; }
+}
+
+.vtuberCharacter {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
+  height: 680px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: charFloat 4s ease-in-out infinite;
+}
+@keyframes charFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-8px); }
+}
+
+.charGlow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(100,80,255,0.35) 0%, transparent 70%);
+  filter: blur(20px);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.1); }
+}
