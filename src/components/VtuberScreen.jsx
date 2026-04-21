@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import styles from './VtuberScreen.module.css';
+import characterImg from '../assets/character.png';
 
 // Aurora blobs
 const auroras = [
@@ -78,10 +79,16 @@ export default function VtuberScreen({ isTalking }) {
       {/* Character */}
       <div className={styles.vtuberCharacter}>
         <div className={styles.charGlow} />
+        <img
+          src={characterImg}
+          alt="상담사 캐릭터"
+          className={styles.characterImg}
+        />
+        {/* SVG 캐릭터 교체 시 아래 svg 블록 삭제 후 위 img 사용 */}
         <svg
           viewBox="0 0 360 640"
           xmlns="http://www.w3.org/2000/svg"
-          style={{ width: 360, height: 640, filter: 'drop-shadow(0 0 30px rgba(120,80,255,0.4))' }}
+          style={{ display: 'none' }}
         >
           {/* 머리카락 뒷쪽 (롱헤어) */}
           <path d="M100 160 Q80 300 90 500 Q100 580 130 600 Q100 400 105 200Z" fill="#1a1a1a"/>
