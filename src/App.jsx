@@ -81,7 +81,7 @@ export default function App() {
             </svg>
           </button>
           <div className={styles.navInfo}>
-            <div className={styles.navName}>air 고객 상담센터</div>
+            <div className={styles.navName}>air 고객센터</div>
             <div className={styles.navSub}>
               상담사 : {agentConfig.name}&nbsp;·&nbsp;상담시간 : <span>{callTimer}</span>
             </div>
